@@ -1,0 +1,236 @@
+docks 13
+
+index    0
+label     Log
+x        0
+y        701
+size_x   1490
+size_y   289
+status   0
+active   1
+opened   1
+location 31
+child0   -1
+child1   -1
+prev_tab 1
+next_tab -1
+parent   10
+notabs   0
+nopad 0
+
+index    1
+label     Profiler
+x        0
+y        701
+size_x   1490
+size_y   289
+status   0
+active   0
+opened   1
+location 31
+child0   -1
+child1   -1
+prev_tab 2
+next_tab 0
+parent   10
+notabs   0
+nopad 0
+
+index    2
+label     Resource View
+x        0
+y        701
+size_x   1490
+size_y   289
+status   0
+active   0
+opened   1
+location 31
+child0   -1
+child1   -1
+prev_tab 5
+next_tab 1
+parent   10
+notabs   0
+nopad 0
+
+index    3
+label     Properties
+x        1490
+y        36
+size_x   430
+size_y   954
+status   0
+active   1
+opened   1
+location 0
+child0   -1
+child1   -1
+prev_tab -1
+next_tab 8
+parent   12
+notabs   0
+nopad 0
+
+index    4
+label     Scene
+x        0
+y        36
+size_x   292
+size_y   665
+status   0
+active   1
+opened   1
+location 121
+child0   -1
+child1   -1
+prev_tab -1
+next_tab -1
+parent   11
+notabs   0
+nopad 0
+
+index    5
+label     Shader Variations
+x        0
+y        701
+size_x   1490
+size_y   289
+status   0
+active   0
+opened   1
+location 31
+child0   -1
+child1   -1
+prev_tab 7
+next_tab 2
+parent   10
+notabs   0
+nopad 0
+
+index    6
+label     Asset Browser
+x        0
+y        701
+size_x   1490
+size_y   289
+status   0
+active   0
+opened   1
+location 31
+child0   -1
+child1   -1
+prev_tab -1
+next_tab 7
+parent   10
+notabs   0
+nopad 0
+
+index    7
+label     Timeline
+x        0
+y        701
+size_x   1490
+size_y   289
+status   0
+active   0
+opened   1
+location 31
+child0   -1
+child1   -1
+prev_tab 6
+next_tab 5
+parent   10
+notabs   0
+nopad 0
+
+index    8
+label     History
+x        1490
+y        36
+size_x   430
+size_y   954
+status   0
+active   0
+opened   1
+location 0
+child0   -1
+child1   -1
+prev_tab 3
+next_tab -1
+parent   12
+notabs   0
+nopad 0
+
+index    9
+label    ##viewports
+x        292
+y        36
+size_x   1198
+size_y   665
+status   0
+active   1
+opened   1
+location 021
+child0   -1
+child1   -1
+prev_tab -1
+next_tab -1
+parent   11
+notabs   1
+nopad 1
+
+index    10
+label    DOCK
+x        0
+y        36
+size_x   1490
+size_y   954
+status   0
+active   1
+opened   0
+location 1
+child0   11
+child1   6
+prev_tab -1
+next_tab -1
+parent   12
+notabs   0
+nopad 0
+
+index    11
+label    DOCK
+x        0
+y        36
+size_x   1490
+size_y   665
+status   0
+active   1
+opened   0
+location 21
+child0   4
+child1   9
+prev_tab -1
+next_tab -1
+parent   10
+notabs   0
+nopad 0
+
+index    12
+label    ROOT
+x        0
+y        36
+size_x   1920
+size_y   954
+status   0
+active   1
+opened   0
+location -1
+child0   10
+child1   3
+prev_tab -1
+next_tab -1
+parent   -1
+notabs   0
+nopad 0
+
