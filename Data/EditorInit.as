@@ -4,6 +4,9 @@ void Start()
     // Register a menu item to open the Bulk Rename window
     Plugin::RegisterMenuItem("Bulk Rename", "Action_BulkRename");
     SubscribeToEvent("Action_BulkRename", "Action_BulkRename");
+    
+    Plugin::RegisterPropertyPage("NavigationMesh", "void Page_NavButtons(NavigationMesh@)", true);
+    Plugin::RegisterPropertyPage("DynamicNavigationMesh", "void Page_NavButtons(NavigationMesh@)", true);
 }
 
 void Action_BulkRename(StringHash eventType, VariantMap& eventData)
@@ -34,4 +37,13 @@ void BulkRenameWindow()
     {
         ImGui::Text("^1< nothing selected to rename >");
     }
+}
+
+void Page_NavButtons(NavigationMesh@ mesh)
+{
+    ImGui::Separator();
+    ImGuiUX::PushLargeBoldFont();
+    if (ImGui::Button("Rebuild NavMesh"))
+        mesh.Build();
+    ImGuiUX::PopFont();
 }
