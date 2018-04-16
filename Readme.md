@@ -16,6 +16,15 @@ Dock panels cannot be closed/hidden. Mostly just a detail.
 
 There's not threading at all - slows down thumbnail loading quite a bit.
 
+### Weird Shit that needs to get fixed soon
+
+- CTRL + Right Click for context menu in scene viewport, or Double Right Click
+  - DearImGui is an asshole about drags and clicks
+- No Accelerator / Shortcut keys yet
+  - ImGui paradigm is an asshole here
+- Gizmo goes insane some times
+  - ImGuizmo is going to go away
+
 ## Core Functionality
 
 ###Scene Tree
@@ -212,6 +221,8 @@ interface ScriptDocument {
 
 ![Img_SceneEdit](img/Img_SceneEdit.png)
 
+- Hold CTRL while using the manipulator to create and manipulate a clone 
+  - Single selection only right now
 - Create / Edit / Delete nodes and components
 - Cut / Copy / Paste
 - Node Operations
