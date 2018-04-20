@@ -125,6 +125,13 @@ The editor sends several additional events that are usable for scripting extensi
   - **`DocumentName`** and **`DocumentPath`** string fields might exist, if they do not then it's a brand new document
 - **`EDITOR_DOCUMENT_CLOSED`** is sent when a document is closed.
   - **`DocumentName`** and **`DocumentPath`** string fields will exist.
+- **`COMPONENT_CONTEXT`** is sent whenever the 'GEAR' icon button of a component is actively showing the menu. Use to add extra commands to a type of component in the properties tab.
+  - **`TypeHash`** field contains the stringhash type ID of the component.
+  - **`Component`** field contains the component pointer
+- **`ASSET_BROWSER_CONTEXT`** is sent whenever a context menu is open over an asset in the asset browser
+  - **`SelectedAssetPath`** field contains the full path to the asset
+  - **`SelectedAssetExt`** field contains only the file extension of the asset, folders will have an empty string.
+  - **`XmlRoot`** field will exist and contain the name of the XML root element if the asset is an XML file.
 
 ####Angelscript editor main interface
 
@@ -153,6 +160,7 @@ Ad-hoc scripts are always immediately freed after execution finishes.
 - **`void Editor::Deselect(Node@ | Component@)`**
 - **`void Editor::AddPin(String title, Vector3 pos, Color pinColor)`** adds an indicator pin to the active scene. Use for things such as *point-files* where it's desirable to be able to indicate locations of problems.
   - The editor's Viewport Settings can be configured to draw massive vertical lines to mark where pins are. This can be used for visualization tasks.
+- **`Vector3 Editor::GetSelectionCenter()`** calculates the centroid of the active selection.
 
 #####Script Plugins
 
