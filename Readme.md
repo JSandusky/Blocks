@@ -18,7 +18,7 @@ There's not threading at all - slows down thumbnail loading quite a bit.
 
 ### Weird Shit that needs to get fixed soon
 
-- CTRL + Right Click for context menu in scene viewport, or Double Right Click
+- **Double Right Click** for context menu in scene viewport
   - DearImGui is an asshole about drags and clicks
 - No Accelerator / Shortcut keys yet
   - ImGui paradigm is an asshole here
@@ -49,7 +49,9 @@ There's not threading at all - slows down thumbnail loading quite a bit.
   - Use *...* for file chooser
   - Use Trashcan to clear
   - Use Edit to open in either appropriate document or using system program
-- *TODO*: Select Node ID / Component ID values from a picker
+- Extensible through script
+  - The *Gear* button can have additional commands added and the property sheet can be appended or overriden for any component
+- TODO*: Select Node ID / Component ID values from a picker
 - *TODO:* PFL input methods (or a QE method)
 
 ###Message Log
@@ -90,6 +92,8 @@ There's not threading at all - slows down thumbnail loading quite a bit.
     - Run as Editor Script
       - Loads file and executes **`void main(Scene@ documentScene)`**
   - Play Sound (wav files only)
+  - Extensible through script using the **`ASSET_BROWSER_CONTEXT`**  message.
+    - Example included for cubemap filtering.
 
 ###Scripting and Extension Functionality
 
@@ -291,6 +295,14 @@ The automatic scene template path for particle effects is `Data/EditorScenes/Mod
   - Play back animations and blending
   - Morph target exposure
   - Inspect and edit animations in timeline
+
+##User Interface Editor (EXPERIMENTAL)
+
+![Img_ModelView](img/Img_UI.png)
+
+Only a first pass, seeing what works and what doesn't.
+
+**Not ready for actual use.** Basic functionality is there but it interface with the general GUI as a whole at the present. Won't be ready for real use for at least a week.
 
 ## Configuration
 
