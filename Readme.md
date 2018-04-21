@@ -4,7 +4,7 @@
 
 Multiple document editor for Urho3D. Brings forward only the most important functionality.
 
-![Blocks_2018-04-13_02-10-24](img/SampleImage.png)
+![Blocks_2018-04-13_02-10-24](img/Img_Main.png)
 
 ### Major To-Dos
 
