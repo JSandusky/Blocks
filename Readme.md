@@ -27,7 +27,7 @@ There's not threading at all - slows down thumbnail loading quite a bit.
 
 ## Core Functionality
 
-###Scene Tree
+### Scene Tree
 
 - Name Coloration
   - White is regular
@@ -40,7 +40,7 @@ There's not threading at all - slows down thumbnail loading quite a bit.
 - Right Click for context menu
 - Filter by node name
 
-###Properties
+### Properties
 
 - Filtering
 - Reset properties to default value
@@ -54,29 +54,29 @@ There's not threading at all - slows down thumbnail loading quite a bit.
 - TODO*: Select Node ID / Component ID values from a picker
 - *TODO:* PFL input methods (or a QE method)
 
-###Message Log
+### Message Log
 
 - Log can be cleared, filtered, and message visibility toggled
 
-###Shader Variations
+### Shader Variations
 
 - View loaded shaders and the preprocessor definitions used by them
 - For figuring out what combinations you need to be potentially concerned about
 
-###Profiler
+### Profiler
 
-###Resource Cache
+### Resource Cache
 
 - View current loaded resources and sizes
 - Thumbnail preview of 2D texture resources
 - Force Reload or Unload
 
-###History (Undo/Redo)
+### History (Undo/Redo)
 
 - Clearable
 - **! Support is incomplete !** for documents other than scene
 
-###Asset Browser
+### Asset Browser
 
 - Drag and drop onto resource reference attributes
 - *Favorites* folder support
@@ -95,11 +95,11 @@ There's not threading at all - slows down thumbnail loading quite a bit.
   - Extensible through script using the **`ASSET_BROWSER_CONTEXT`**  message.
     - Example included for cubemap filtering.
 
-###Scripting and Extension Functionality
+### Scripting and Extension Functionality
 
 Blocks can be customized to do specialized tasks.
 
-####Template Scenes
+#### Template Scenes
 
 Documents other than the Scene/prefab will check for a special scene to load instead of constructing a default scene. Use for providing your own viewing cases such as particular light arrangements or a sandbox.
 
@@ -112,7 +112,7 @@ Documents other than the Scene/prefab will check for a special scene to load ins
 
 Viewer scenes can be manually loaded later in an open document if the criteria should change.
 
-####Special Events
+#### Special Events
 
 The editor sends several additional events that are usable for scripting extension points.
 
@@ -140,7 +140,7 @@ The editor sends several additional events that are usable for scripting extensi
     - Attaches the menu-item only to cubemaps
     - Fires up CMFT via SystemRun, overwrites the existing XML cubemap, and deletes the previous cubemap face images
 
-####Angelscript editor main interface
+#### Angelscript editor main interface
 
 At startup the editor looks for a **`EditorInit.as`** script in the same folder as the executable.  If this script is found the **`void Start()`** method will be executed.
 
@@ -156,7 +156,7 @@ Ad-hoc scripts are always immediately freed after execution finishes.
 - **`Scene@ Editor::GetMasterScene()`** returns the global underlying scene. Utility varies.
 - **`Scene@ Editor::GetActiveScene()`** returns the Scene of the active 3D document.
 
-#####Selection Management
+##### Selection Management
 
 - **`uint Editor::GetSelectionCount()`** returns the number of selected objects in the active document
 - **`Node@ Editor::GetSelectedNode(uint index)`** returns the node at the given selection index, null if the object at that index is not a node
@@ -169,7 +169,7 @@ Ad-hoc scripts are always immediately freed after execution finishes.
   - The editor's Viewport Settings can be configured to draw massive vertical lines to mark where pins are. This can be used for visualization tasks.
 - **`Vector3 Editor::GetSelectionCenter()`** calculates the centroid of the active selection.
 
-#####Script Plugins
+##### Script Plugins
 
 - **`void Plugin::RegisterMenuItem(String title, String eventID)`** creates a menu-item with the given title. When selected in the UI an event with the provided ID will be sent.
   - Menu items appear in the order of registration.
@@ -186,7 +186,7 @@ Ad-hoc scripts are always immediately freed after execution finishes.
   - Execution model is the same as with `Editor_ShowModalWindow`
   - Example: `Editor::ShowToolWindow("Tool Window", "void TestTool()");`
 
-#####WIP: Script Documents
+##### WIP: Script Documents
 
 The **`EditorInit.as`** script will be able to register implementations of the following tentative interface:
 
@@ -204,7 +204,8 @@ interface ScriptDocument {
   bool HasCustomSceneTree();
 }
 ```
-#####ImGui Extensions
+
+##### ImGui Extensions
 
 - **`bool ImGui::BeginDock(const String&in)`** starts a docking window and returns true if it is visible.
 - **`void ImGui::EndDock()`** ends the current docking window. Must be called if `BeginDock` was called (**even if it returns false**).
@@ -226,13 +227,13 @@ interface ScriptDocument {
 - **`bool ImGuiUX::TabItem(String title, bool& state, int flags)`** places a tab into a tab-bar widget.
 - **`void ImGuiUX::EndTabBar()`** ends the currently active tab-bar.
 
-#####General Extensions
+##### General Extensions
 
 - **`String OS::GetOpenFile(String title, String filter)`** displays an OS open file dialog, separate types with `|`. Returns an empty string if failed.
   - Example filter: `Scene Files (*.xml)|*.xml`
 - **`String OS::GetSaveFile(String title, String filter)`** displays an OS save file dialog, separate types with `|`. Returns an empty string if failed.
 
-##Scene Editor
+## Scene Editor
 
 ![Img_SceneEdit](img/Img_SceneEdit.png)
 
@@ -256,7 +257,7 @@ interface ScriptDocument {
 - Render environment cubemaps
 - Most operations are reversable through undo/redo
 
-##Particle Effect Editor
+## Particle Effect Editor
 
 ![Img_ParticleEdit](img/Img_ParticleEdit.png)
 
@@ -267,7 +268,7 @@ The automatic scene template path for particle effects is `Data/EditorScenes/Par
 - **TODO:** edit color and texture keys via animation timeline.
 - **NOTE:** Effect properties are only editable when no scene objects are selected.
 
-##Material Editor
+## Material Editor
 
 ![Img_MatEdit](img/Img_MatEdit.png)
 
@@ -277,7 +278,7 @@ The automatic scene template path for particle effects is `Data/EditorScenes/Mat
 
 - **NOTE:** Material properites are only editable when no scene objects are selected.
 
-##Model Viewer
+## Model Viewer
 
 ![Img_ModelView](img/Img_ModelView.png)
 
@@ -296,7 +297,7 @@ The automatic scene template path for particle effects is `Data/EditorScenes/Mod
   - Morph target exposure
   - Inspect and edit animations in timeline
 
-##User Interface Editor (EXPERIMENTAL)
+## User Interface Editor (EXPERIMENTAL)
 
 ![Img_ModelView](img/Img_UI.png)
 
@@ -338,7 +339,7 @@ Adjust transform speeds and snapping.
 - Orbital spawner for natural placement
   - Spawn from list A, then spawn from list B within X of A, ...
 
-###Painter
+### Painter
 
 - Planar Masks
   - Usable with spawner
@@ -347,7 +348,7 @@ Adjust transform speeds and snapping.
   - Automatic cleanup of duplicate model assets when vertex color painting
     - Only for absolute values (ie. all vertices the same color)
 
-###Lightmapping
+### Lightmapping
 
 - Based on old split lightmapper
 - Direct lighting only mode
@@ -355,7 +356,7 @@ Adjust transform speeds and snapping.
 - Automatic material *promotion* and *demotion*
   - Non-lightmapped version -> lightmapped version
 
-###Misc.
+### Misc.
 
 - Thumbnails
   - Rasterizer a thumbnails database for Model files
