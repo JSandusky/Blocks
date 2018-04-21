@@ -132,6 +132,9 @@ The editor sends several additional events that are usable for scripting extensi
   - **`SelectedAssetPath`** field contains the full path to the asset
   - **`SelectedAssetExt`** field contains only the file extension of the asset, folders will have an empty string.
   - **`XmlRoot`** field will exist and contain the name of the XML root element if the asset is an XML file.
+  - The included EditorInit.as script has an example for extending XML Cubemaps with a "CMFT Radiance Filter" command to run CMFT for generating a PMREM for PBR use.
+    - Attaches the menu-item only to cubemaps
+    - Fires up CMFT via SystemRun, overwrites the existing XML cubemap, and deletes the previous cubemap face images
 
 ####Angelscript editor main interface
 
