@@ -22,9 +22,9 @@ Multiple document editor for Urho3D. Brings forward only the most important func
 
 ... that may make things unpleasant.
 
-Keyboard accelerators and shortcuts are not present. Due to debate on where they belong, either as general purpose bindings in Urho3D that are intercepted before they reach the GUI or through the GUI itself.
+~~Keyboard accelerators and shortcuts are not present. Due to debate on where they belong, either as general purpose bindings in Urho3D that are intercepted before they reach the GUI or through the GUI itself.~~
 
-Dock panels cannot be closed/hidden. Mostly just a detail.
+~~Dock panels cannot be closed/hidden. Mostly just a detail.~~
 
 There's not threading at all - slows down thumbnail loading quite a bit.
 
