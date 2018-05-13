@@ -6,6 +6,7 @@
 
     void Plugin::RegisterMenuItem(const String&, const String&);
     void Plugin::RegisterPropertyPage(const String&, const String&);
+    void Plugin::RegisterAction(const String& grp, const String& name, const String& msg, const String& eventID);
 ## Editor Bindings
 
     void Editor::AddSelection(Object);
