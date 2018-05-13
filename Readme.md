@@ -2,9 +2,21 @@
 
 [TOC]
 
+## Source-code is all rights reserved
+
+Source is only provided as a reference and is not for use or redistribution, I reserve all rights to it.
+
+Source quality is quite poor as it's the product of baking down generated source code followed with some very light refactoring. Thus, files like `GUI_Main` contain practically everything because all code generation was emitted into those locations. Order of functions and the like may not be sensible depending on what part of the emission pass they're emitted from.
+
+Again, 100% proprietary and solely provided for closed door viewing.
+
+---
+
 Multiple document editor for Urho3D. Brings forward only the most important functionality.
 
-![Blocks_2018-04-13_02-10-24](SampleImage.png)
+![Blocks_2018-04-13_02-10-24](img/SampleImage.png)
+
+**No**, that wildness in the Scenetree was **never** meant to be touched by human hands. The cooked down HierarchialDataTemplate is anything but pretty.
 
 ### Major To-Dos
 
@@ -213,7 +225,7 @@ interface ScriptDocument {
 
 ##Scene Editor
 
-![Img_SceneEdit](Img_SceneEdit.png)
+![Img_SceneEdit](img/Img_SceneEdit.png)
 
 - Create / Edit / Delete nodes and components
 - Cut / Copy / Paste
@@ -235,7 +247,7 @@ interface ScriptDocument {
 
 ##Particle Effect Editor
 
-![Img_ParticleEdit](Img_ParticleEdit.png)
+![Img_ParticleEdit](img/Img_ParticleEdit.png)
 
 Equivalent to previous Urho3D particle effect editor. Supports toggling any node named *Substrate*, useful for testing soft-particles.
 
@@ -246,7 +258,7 @@ The automatic scene template path for particle effects is `Data/EditorScenes/Par
 
 ##Material Editor
 
-![Img_MatEdit](Img_MatEdit.png)
+![Img_MatEdit](img/Img_MatEdit.png)
 
 Equivalent to previous Urho3D material editor.
 
@@ -256,7 +268,7 @@ The automatic scene template path for particle effects is `Data/EditorScenes/Mat
 
 ##Model Viewer
 
-![Img_ModelView](Img_ModelView.png)
+![Img_ModelView](img/Img_ModelView.png)
 
 Inspects the contents of an Urho3D model file.
 
