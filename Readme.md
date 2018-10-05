@@ -2,14 +2,6 @@
 
 Closed, last commmit. WIP tasks are complete but will not appear in public versions.
 
-## Source-code is all rights reserved
-
-Source is only provided as a reference and is not for use or redistribution, I reserve all rights to it.
-
-Source quality is quite poor as it's the product of baking down generated source code followed with some very light refactoring. Thus, files like `GUI_Main` contain practically everything because all code generation was emitted into those locations. Order of functions and the like may not be sensible depending on what part of the emission pass they're emitted from.
-
-Again, 100% proprietary and solely provided for closed door viewing.
-
 ---
 
 Multiple document editor for Urho3D. Brings forward only the most important functionality.
